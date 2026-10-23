@@ -1,0 +1,8 @@
+.git
+**/node_modules
+data
+secrets
+models
+.env
+**/chrome-profile
+**/*.log

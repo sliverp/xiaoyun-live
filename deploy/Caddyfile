@@ -1,0 +1,31 @@
+{$PUBLIC_HOST} {
+  header {
+    Referrer-Policy "no-referrer"
+    X-Content-Type-Options "nosniff"
+  }
+  redir /live-demo /live-demo/ 308
+  handle_path /live-demo/* {
+    root * /srv/live-demo
+    file_server
+  }
+  handle_path /live-bgm/* {
+    root * /srv/live-bgm
+    file_server
+  }
+  redir /live-slides /live-slides/ 308
+  handle_path /live-slides/* {
+    root * /srv/live-slides
+    file_server
+  }
+  redir /guide /guide/ 308
+  handle_path /guide/* {
+    root * /srv/guide
+    file_server
+  }
+  handle /healthz {
+    respond "xiaoyun-live gateway ok" 200
+  }
+  handle {
+    reverse_proxy 127.0.0.1:{$DSH_PORT}
+  }
+}

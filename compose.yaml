@@ -1,0 +1,38 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    network_mode: host
+    env_file: .env
+    environment:
+      DSH_HOME: /data
+      HOME: /data/home
+    volumes:
+      - ./data:/data
+      - ${TTS_CREDENTIALS_DIR:-/etc/xiaoyun-live}:/secrets:ro
+    mem_limit: 3g
+  asr:
+    build: ./asr
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./models:/models:ro
+    mem_limit: 1500m
+  gateway:
+    image: caddy:2.10.2-alpine
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      PUBLIC_HOST: ${PUBLIC_HOST}
+      DSH_PORT: ${DSH_PORT:-13081}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./web:/srv/live-demo:ro
+      - ./bgm:/srv/live-bgm:ro
+      - ./examples/slides:/srv/live-slides:ro
+      - ./public:/srv/guide:ro
+      - caddy_data:/data
+      - caddy_config:/config
+volumes:
+  caddy_data:
+  caddy_config:

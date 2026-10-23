@@ -1,0 +1,15 @@
+{
+  "name": "xiaoyun-live",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI virtual avatar live streaming with voice, audience interaction and stage control",
+  "scripts": {
+    "test": "node --test plugin/lib/*.test.mjs live-bridge/*.test.mjs",
+    "check:release": "python3 scripts/check_release.py"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "license": "MIT"
+}

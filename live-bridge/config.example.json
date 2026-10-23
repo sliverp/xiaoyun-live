@@ -1,0 +1,5 @@
+{
+  "endpoint": "https://YOUR_HOST/api/voice-call/live-ingest",
+  "ingestToken": "REPLACE_WITH_YOUR_PRIVATE_INGEST_TOKEN",
+  "metricsIntervalMs": 5000
+}

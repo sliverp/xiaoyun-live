@@ -1,0 +1,28 @@
+{
+  "provider": "lkeap-plan-live",
+  "displayName": "腾讯云 Token Plan 主通道",
+  "baseURL": "https://api.lkeap.cloud.tencent.com/plan/v3",
+  "credentialRef": "LKEAP_TOKEN_PLAN_API_KEY",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "modelName": "DeepSeek V4 Flash 0731 · Token Plan",
+  "primaryTimeoutMs": 10000,
+  "fallbackTimeoutMs": 30000,
+  "cooldownMs": 300000,
+  "fallbacks": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-v4-flash-vision-exp",
+      "label": "DeepSeek 官方备用"
+    },
+    {
+      "provider": "tokenhub-live",
+      "model": "deepseek/deepseek-flash",
+      "label": "TokenHub DeepSeek Flash"
+    },
+    {
+      "provider": "tokenhub-live",
+      "model": "hy4-preview",
+      "label": "TokenHub 混元 Hy4"
+    }
+  ]
+}

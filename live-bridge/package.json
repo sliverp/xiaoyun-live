@@ -1,0 +1,12 @@
+{
+  "name": "dsh-voice-live-bridge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node bridge.mjs",
+    "test": "node --test *.test.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "25.12.0"
+  }
+}
