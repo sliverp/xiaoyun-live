@@ -2,9 +2,9 @@
 
 小云 Live 把能对话的 Agent、语音、虚拟形象和直播场控连接起来。主持人可以直接与小云说话，观众可以发弹幕参与互动；小云也能围绕演示内容持续讲解，在合适的完整口播之间安排互动、活动与翻页。
 
-![小云 Live 作品封面](web/assets/project-cover.png)
+![小云 Live 作品封面](web/assets/project-cover.jpg)
 
-[公开交互演示](https://43.129.228.84.sslip.io/live-demo/) · [实现方案](https://43.129.228.84.sslip.io/guide/)
+[公开交互演示](https://43.129.228.84.sslip.io/live-demo/) · [实现方案](https://43.129.228.84.sslip.io/guide/) · [作品说明视频](https://43.129.228.84.sslip.io/live-demo/assets/project-overview.mp4)
 
 ## 能做什么
 
