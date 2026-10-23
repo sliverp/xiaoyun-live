@@ -2,7 +2,7 @@
 
 验证日期：2026年10月23日。
 
-- `npm test`：150项无密钥行为测试通过，未跳过。
+- `node --test plugin/lib/*.test.mjs live-bridge/*.test.mjs`：150项无密钥行为测试通过，未跳过。
 - `node --test plugin/lib/live-flash-sale.test.mjs plugin/lib/live-flash-sale-client.test.mjs`：示例活动地址调整后，15项相关测试通过。
 - `node --check`：服务端入口、部署配置生成器、示例二维码浮层通过语法检查。
 - `python3 scripts/check_release.py` 和 `git diff --cached --check`：公开文件检查通过。
